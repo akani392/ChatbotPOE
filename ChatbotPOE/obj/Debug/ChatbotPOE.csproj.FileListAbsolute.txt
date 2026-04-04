@@ -1,0 +1,8 @@
+C:\Users\Akani Mbambo\source\repos\ChatbotPOE\obj\Debug\ChatbotPOE.csproj.AssemblyReference.cache
+C:\Users\Akani Mbambo\source\repos\ChatbotPOE\obj\Debug\ChatbotPOE.csproj.CoreCompileInputs.cache
+C:\Users\Akani Mbambo\source\repos\ChatbotPOE\bin\Debug\ChatbotPOE.exe.config
+C:\Users\Akani Mbambo\source\repos\ChatbotPOE\bin\Debug\ChatbotPOE.exe
+C:\Users\Akani Mbambo\source\repos\ChatbotPOE\bin\Debug\ChatbotPOE.pdb
+C:\Users\Akani Mbambo\source\repos\ChatbotPOE\obj\Debug\ChatbotPOE.exe
+C:\Users\Akani Mbambo\source\repos\ChatbotPOE\obj\Debug\ChatbotPOE.pdb
+C:\Users\Akani Mbambo\source\repos\ChatbotPOE\bin\Debug\Recording\Recording2.wav
