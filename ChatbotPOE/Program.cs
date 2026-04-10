@@ -42,21 +42,35 @@ namespace ChatbotPOE
             //welcome message
             bot.TypeMessage("[Chatbot]: Welcome to the Cybersecurity Awareness Chatbot", Cyan);
 
-            Write("\nEnter your name: ");
-            string name = ReadLine();
+            string name = "";
 
-            if (string.IsNullOrWhiteSpace(name))
-                name = "Citizen";
+            //loop if name is more than 2 letters
+            while (true)
+            {
+                Write("\nEnter your name: ", Magenta);
+                name = ReadLine();
+
+                if (string.IsNullOrWhiteSpace(name) || name.Trim().Length <2)
+                {
+                    WriteLine("Please put in your name again. Your name must be more than 2 letters long ", Red);
+                }
+                else
+                {
+                    break;
+                }
+            }
+
+          
 
 
-            bot.TypeMessage($"[Chatbot]: Hello {name}! I will help you stay safe online.", Green);
+            bot.TypeMessage($"[Chatbot]: Hello {name}! I will help you stay safe online.", Magenta);
 
             acsiART.Divider();
 
-            acsiART.SystemLine("Ask about passwords, phishing, safe browsing, https, you can even ask questions like how are you, purpose, help.");
+            acsiART.SystemLine("Ask anything like, how are you, purpose, help, password, phishing, link, scam, https, mfa.");
             acsiART.SystemLine("Type 'exit' to quit.");
 
-
+            acsiART.Divider();
 
             //this is the main interactiion loop
             while (true)
@@ -66,6 +80,8 @@ namespace ChatbotPOE
 
                 if (!string.IsNullOrWhiteSpace(userInput) && userInput.ToLower().Trim() == "exit")
                 {
+                    acsiART.Divider();
+
                     acsiART.BotLine($"Goodbye {name}! Stay safe online.", Magenta);
                     break;
                 }

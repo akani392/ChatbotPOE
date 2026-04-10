@@ -58,27 +58,32 @@ namespace ChatbotPOE
 
 
             //array for dictnoary function
-            string[] keywords = { "how are you", "purpose", "ask", "password", "phishing", "link", "scam" };
+            string[] keywords = {
+                "how are you","purpose", "help", "password", "phishing", "link", "scam", "https", "mfa"
+            };
 
             string[] responses = {
-                "I am doing good and i am ready to help you stay safe online",
-                "The purpose of this application is to educate users about cybersecurity threats",
-                "You can ask questions about passwords,phishing, scams, and safe browsing.",
-                "You can ask questions about passwords, phishing,and safe browsing",
-                "A strong password should be\r\nat least 12 characters long and include letter numbers, and symbols.",
-                "Phishing is when attackers use fake emails or websites to trick you into giving persona information.",
-                "Always hover over a link to see where it leads before clicking.",
-                "Scams are fraudulent attempts to steal your money or information. Always verify sources before trusting them."
-             };
+                "I'm functioning perfectly and ready to help you secure your digital life",
+                "My purpose is to be your personal cybersecurity mentor and keep you safe from online threats.",
+                "I can help with: Passwords, Phishing, Scams, MFA, and Safe Browsing. Just type a keyword",
+                "Strong passwords use a mix of uppercase, lowercase, numbers, and symbols. Avoid using your name or birthdate!",
+                "Phishing is a trick where hackers send fake emails. Look for bad grammar and urgent demands for money.",
+                "Before you click, hover your mouse over the link to see the real URL. If it looks suspicious, don't click",
+                "Online scams often promise 'free' gifts or claim your bank account is locked. Never give your PIN to anyone.",
+                "HTTPS means the website is encrypted. Look for the padlock icon in your browser address bar before entering data.",
+                "Multi-Factor Authentication (MFA) adds a second layer of security, like a code sent to your phone. Always enable it!"
+            };
 
             // Check dictionary
             for (int i = 0; i < keywords.Length; i++)
             {
                 if (query.Contains(keywords[i]))
                 {
-                    return (responses[i], Magenta);
+                    return (responses[i], Green);
                 }
             }
+
+ 
 
             // Default response
             return ("I did not understand that. Try asking about passwords, phishing, or scams.", Red);

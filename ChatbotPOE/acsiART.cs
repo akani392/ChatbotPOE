@@ -11,23 +11,23 @@ namespace ChatbotPOE
         public static void DisplayWelcome()
         {
              
-
+            // gets the color for the acsii art
             ForegroundColor = Cyan;
             WriteLine(@"
-                   ┌──────────────┐
-                   │  CHATBOT CO  │
-                   └──────────────┘
-                        [● ●]
-                         ───
-                        \___/
-                         ││
-                       ──┴┴──
-            ");
+╔══════════════════════════════════════════════════════════════════════════════════════════╗
+║   ______      __               _____                      _ __           ___             ║
+║  / ____/_  __/ /_  ___  _____/ ___/___  _______  _______(_) /___  __   /   |  ____  ____ ║
+║ / /   / / / / __ \/ _ \/ ___/\__ \/ _ \/ ___/ / / / ___/ / __/ / / /  / /| | / __ \/ __ \║
+║/ /___/ /_/ / /_/ /  __/ /   ___/ /  __/ /__/ /_/ / /  / / /_/ /_/ /  / ___ |/ /_/ / /_/ /║
+║\____/\__, /_.___/\___/_/   /____/\___/\___/\__,_/_/  /_/\__/\__, /  /_/  |_/ .___/ .___/ ║
+║     /____/                                                 /____/         /_/   /_/      ║
+╚══════════════════════════════════════════════════════════════════════════════════════════╝
+                ");
             ResetColor();
         }
 
 
-
+        //the === that appears at the top of the page
         public static void Header(string text)
         {
             string upper = text.ToUpper();
@@ -38,6 +38,8 @@ namespace ChatbotPOE
             ResetColor();
         }
 
+
+        //user input responeses
         public static void UserLine (string text)
         {
             ForegroundColor = Cyan;
@@ -46,6 +48,7 @@ namespace ChatbotPOE
 
         }
 
+        //chatboot responeses
         public static void BotLine (string text)
         {
             ForegroundColor = Magenta;
@@ -54,18 +57,18 @@ namespace ChatbotPOE
             WriteLine(text);
         }
 
-         
-        //divides each comment section
+
+        //divider for each section 
         public static void Divider()
         {
-            ForegroundColor = DarkGray;
+            ForegroundColor = White;
             WriteLine(new string('-', 60));
             ResetColor();
         }
 
 
 
-        public static void SystemLine (string text)
+        public static void SystemLine(string text)
         {
             ForegroundColor = Yellow;
             Write("[Chatbot]: ");

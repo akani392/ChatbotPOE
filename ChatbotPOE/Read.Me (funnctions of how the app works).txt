@@ -1,0 +1,7 @@
+This file says set by set how the application runs
+the appliation will first shoow a logo that is in a box that says "cyber security chatbot app
+then after that it will play a recording that is about 4 seconds long
+after that it ask the user to press any key to start the app
+then it will ask user for thier name if their name is less than 2 letters long it will ask them to re enter a name that is more that 2 letters long
+then it welocme the user and ask the user what to serach or tell them to enter exit if they want to exit the app
+the user has about 9 functions to enter or can press exit to end the application
